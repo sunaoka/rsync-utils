@@ -1,0 +1,29 @@
+{
+    "name": "sunaoka/rsync-utils",
+    "description": "rsync utilities for php",
+    "keywords": ["rsync", "--itemize-changes"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "sunaoka",
+            "email": "sunaoka@pocari.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Sunaoka\\RsyncUtils\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sunaoka\\RsyncUtils\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}
