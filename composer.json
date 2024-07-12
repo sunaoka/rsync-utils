@@ -10,6 +10,12 @@
             "email": "sunaoka@pocari.org"
         }
     ],
+    "require": {
+        "php": "^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5 || ^10.0 || ^11.0"
+    },
     "autoload": {
         "psr-4": {
             "Sunaoka\\RsyncUtils\\": "src/"
@@ -20,10 +26,10 @@
             "Sunaoka\\RsyncUtils\\Tests\\": "tests/"
         }
     },
-    "require": {
-        "php": "^8.0"
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
     },
-    "require-dev": {
-        "phpunit/phpunit": "^9.5"
-    }
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
