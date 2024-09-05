@@ -8,13 +8,13 @@ use JsonSerializable;
 
 class RsyncFileObject implements JsonSerializable
 {
-    private ?string $path = null;
+    private string $path = '';
 
     private string $type;
 
-    private ?string $updateType = null;
+    private string $updateType = '';
 
-    private ?string $fileType = null;
+    private string $fileType = '';
 
     private bool $checksum = false;
 
@@ -223,7 +223,7 @@ class RsyncFileObject implements JsonSerializable
 
     private function setSkipped(string $line): void
     {
-        $this->path = null;
+        $this->path = '';
         $this->type = 'skipped';
         $this->message = $line;
     }
