@@ -47,7 +47,13 @@ class RsyncFileObject implements JsonSerializable
             return;
         }
 
-        [$itemized, $this->path] = preg_split('/ +/', $line, 2);
+        $item = preg_split('/ +/', $line, 2);
+        if ($item === false) {
+            $this->setSkipped($line);
+            return;
+        }
+
+        [$itemized, $this->path] = $item;
 
         $items = str_split($itemized);
 
